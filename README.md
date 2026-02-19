@@ -134,7 +134,15 @@ private_ergasia/
 
 # 6️⃣ Πώς τρέχω το πρόγραμμα
 
+Προτεινόμενο: χρήση `uv run`.
+
 ## 🔹 CLI Version
+
+```bash
+uv run main.py
+```
+
+Εναλλακτικά (χωρίς uv):
 
 ```bash
 python main.py
@@ -143,7 +151,13 @@ python main.py
 ## 🔹 Web Version
 
 ```bash
-python web_app.py
+uv run uvicorn web_app:app --reload
+```
+
+Εναλλακτικά (χωρίς uv, μέσα σε venv):
+
+```bash
+uvicorn web_app:app --reload
 ```
 
 και άνοιγμα:
@@ -185,6 +199,8 @@ Email: giannis@email.gr
 - Δεν χρησιμοποιείται εξωτερική βάση δεδομένων
 - Αποθήκευση in-memory
 - Προσομοίωση ειδοποιήσεων
+- Το `main.py` εκτελεί το CLI εργαλείο
+- Το `web_app.py` εκθέτει Web UI + API μέσω FastAPI/uvicorn
 
 ---
 
@@ -218,5 +234,5 @@ CLI / Web Implementation
 
 ## 👥 Μέλη Ομάδας
 
-- Μιχάλης XXXXX – ΑΜ XXXXX
-- …
+- Βασιλική Καλαντζή - ΑΜ:25010
+- Μιχάλης Λάζαρης – ΑΜ:25029
